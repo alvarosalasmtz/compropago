@@ -17,7 +17,7 @@ class ChargeServiceImpl implements ChargeService {
         try {
             response = client.post(path: '/v1/charges', accept: ContentType.JSON) { json charge.properties }
         } catch (RESTClientException ex) {
-            //response = ex.response
+            return null;
         }
         def jsonSlurper = new JsonSlurper()
         def object = jsonSlurper.parseText(response.contentAsString)
