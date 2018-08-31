@@ -24,6 +24,7 @@ class Order {
     String order_name
     String order_price
     String image_url
+    String exchange
 }
 
 class FeeDetails {
@@ -48,8 +49,16 @@ class Instructions {
 }
 
 class Details {
+    String payment_amount
+    String payment_store
     String amount
     String store
     String bank_account_number
     String bank_name
+    String bank_account_holder_name
+    String bank_reference
+    String company_bank_number
+    String company_reference_name
+    String company_reference_number
+    String order_reference_number
 }

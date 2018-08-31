@@ -9,4 +9,12 @@ import mx.com.interware.compropago.command.ChargeResponse
 interface ChargeService {
 
     ChargeResponse create(ChargeRequest charge, String keyUser)
+
+    Map<String, Object> get(String chargeId, String keyUser)
+
+    List<Map> findAll();
+
+    Map findById(String id);
+
+    Map findByName(String name);
 }
